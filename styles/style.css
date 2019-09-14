@@ -1,4 +1,5 @@
-body , html {
+*, *::after, *::before{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -16,43 +17,32 @@ body {
 
 .textarea {
     margin-top: 5px;
-    background-color: #202040;
+    background-color: rgba(10,11,12,0.1);
     color: white;
     border: none;
     display: block;
-    font-size: 15px;
+    font-size: 1.5em;
     direction: rtl;
     font-family: IranSans;
+    resize: none;
+    outline: none;
+    padding: 18px;
+    margin: 18px;
 }
-
-.publish {
-    background-color: rgba(0,0,0,0);
-    border: 1px solid #1089ff ;
-    color: #1089ff;
-    font-size: 18px;
-    padding: 9px;
-    border-radius: 11px;
-    cursor: pointer;
-    transition: all 0.2s;
-    float: left;
-}
-
-.publish:hover {
-    background: #1089ff;
-    color: white;
-}
-
 
 .titlearea {
-    background-color: #202040;
+    background-color: rgba(10,11,12,0.1);
     color: white;
     border: none;
     display: block;
-    font-size: 19px;
+    font-size: 1.8em;
     direction: rtl;
     font-weight: bolder;
     font-family: IranSans;
-    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 18px;
+    margin: 18px;
 }
 
 .test-area {
@@ -60,4 +50,19 @@ body {
     justify-content: center;
     flex-direction: column;
     margin: 30px;
+}
+
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #000;
+        color: white;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #202040;
+        color: white;
+    }
 }
